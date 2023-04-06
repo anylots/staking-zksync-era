@@ -38,12 +38,6 @@ async function main() {
   await aleoToken.approve(stakingHub.address, 100 * 10 ** 6, overrides);
   await stakingHub.prepareRewardVault(100 * 10 ** 6, overrides);
 
-  // await new Promise((resolve, reject) => {
-  //   setTimeout(function () {
-  //     resolve('time')
-  //   }, 3000)
-  // })
-
   let reviewRewardVault = await stakingHub.reviewRewardVault();
   console.log("reviewRewardVault:" + reviewRewardVault);
 

@@ -14,11 +14,12 @@ const overrides = {
 // yours, or create new ones.
 async function main() {
   ///Prepare deployer
-  let privateKey = "0x433200fedb2386cd4fa915ce4c6777729534458339c29d110db4124997715fe3";
+  let privateKey = "";
   let customHttpProvider = new ethers.providers.JsonRpcProvider(
     "https://testnet.era.zksync.dev"
   );
   const signer = new ethers.Wallet(privateKey, customHttpProvider);
+  
   console.log(signer.address);
 
   ///deposit
